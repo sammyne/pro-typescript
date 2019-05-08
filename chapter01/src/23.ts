@@ -13,3 +13,5 @@ type Nullable<T> = { [k in keyof T]: T[k] | null }
 type ReadonlyOptions = Readonly<Options>
 type OptionalOptions = Optional<Options>
 type NullableOptions = Nullable<Options>
+
+export { ReadonlyOptions, OptionalOptions, NullableOptions }

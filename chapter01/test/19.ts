@@ -2,7 +2,7 @@ import { Monument } from "../src/19"
 
 import assert from "assert"
 
-describe("", function() {
+describe("Listing 1-19. Typed arrays", function() {
   it("should be 'Peter the Great'", function() {
     // The array is typed using the Monument interface
     const monuments: Monument[] = []

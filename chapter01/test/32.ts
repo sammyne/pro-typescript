@@ -1,6 +1,6 @@
 import assert from "assert"
 
-describe("Listing 1-30. Increment and decrement", () => {
+describe("Listing 1-32. Binary plus operator", () => {
   it("", () => {
     // 6: number
     const num = 5 + 1

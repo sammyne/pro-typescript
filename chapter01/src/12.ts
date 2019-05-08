@@ -9,3 +9,5 @@ enum DiscFlags {
 }
 
 export { DiscFlags }
+
+// See ~/test/12.ts

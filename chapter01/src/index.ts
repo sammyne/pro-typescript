@@ -1,13 +1,9 @@
-//import { DiscFlags } from "../src/12"
+import { DiscFlags } from "./12"
 
-//import { describe, it } from "mocha"
-//import "mocha"
-
-//import assert from "assert"
+import assert from "assert"
 
 describe("Listing 1-12. Flags", function() {
   it("should checking the personality flags correctly", function() {
-    /*
     // Using flags
     const personality = DiscFlags.Drive | DiscFlags.Conscientiousness
 
@@ -28,6 +24,5 @@ describe("Listing 1-12. Flags", function() {
     const hasC =
       (personality & DiscFlags.Conscientiousness) == DiscFlags.Conscientiousness
     assert.ok(hasC)
-    */
   })
 })

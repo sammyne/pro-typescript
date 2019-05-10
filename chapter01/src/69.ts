@@ -6,6 +6,8 @@ interface NodeList {
 
 const nodeList = document.getElementsByTagName("div")
 
+/*
 nodeList.onclick = function(event: MouseEvent) {
   alert("Clicked")
 }
+*/

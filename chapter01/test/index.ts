@@ -46,6 +46,23 @@ describe('Listing 1-05. Name reuse with var', () => {
   });
 });
 
+describe('Listing 1-10. Enumerations', () => {
+  it('should find name for VehicleType.Lorry', () => {
+    enum VehicleType {
+      PedalCycle,
+      MotorCycle,
+      Car,
+      Van,
+      Bus,
+      Lorry
+    }
+    const type = VehicleType.Lorry;
+
+    const typeName = VehicleType[type]; // 'Lorry'
+    expect(typeName).to.equal("Lorry")
+  });
+});
+
 describe("Listing 1-64. Currying with arrow functions", () => {
   let multiply: (a: number) => (b: number) => number
 

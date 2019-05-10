@@ -11,7 +11,6 @@
 //import "../src/80"
 
 // testing
-import "./12"
 import "./59"
 
 import { assert, expect } from "chai"
@@ -117,6 +116,21 @@ describe("Listing 1-12. Flags", function () {
   })
 })
 
+describe('Listing 1-13. Constant enumeration', () => {
+  it('should get Lorry as 5', () => {
+    const enum VehicleType {
+      PedalCycle,
+      MotorCycle,
+      Car,
+      Van,
+      Bus,
+      Lorry,
+    }
+
+    const type = VehicleType.Lorry
+    expect(type).to.equal(5)
+  });
+});
 
 describe("Listing 1-64. Currying with arrow functions", () => {
   let multiply: (a: number) => (b: number) => number

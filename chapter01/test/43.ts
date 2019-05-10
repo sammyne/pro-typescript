@@ -1,4 +1,4 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-43. Skipping items", () => {
   it("", () => {
@@ -9,12 +9,12 @@ describe("Listing 1-43. Skipping items", () => {
 
     // 1
     //console.log(first)
-    assert.deepStrictEqual(first, 1)
+    expect(first).to.equal(1)
 
     // 3
     //console.log(second)
-    assert.deepStrictEqual(second, 3)
+    expect(second).to.equal(3)
 
-    assert.deepStrictEqual(fourth, 10)
+    expect(fourth).to.equal(10)
   })
 })

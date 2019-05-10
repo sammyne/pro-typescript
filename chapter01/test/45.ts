@@ -1,4 +1,4 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-45. Object destructuring", () => {
   it("", () => {
@@ -9,10 +9,10 @@ describe("Listing 1-45. Object destructuring", () => {
 
     // 'Central High'
     //console.log(s)
-    assert.deepStrictEqual(s, "Central High")
+    expect(s).to.equal("Central High")
 
     // 'Centaurs'
     //console.log(t)
-    assert.deepStrictEqual(t, "Centaurs")
+    expect(t).to.equal("Centaurs")
   })
 })

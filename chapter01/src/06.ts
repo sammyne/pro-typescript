@@ -1,6 +1,6 @@
 // Listing 1-6. Constants
 
-;(() => {
+namespace Listing06 {
   const name = "Lily"
 
   // Error! Cannot assign to name because it is a constant
@@ -10,4 +10,4 @@
 
   // Mutable - this changes the value of digits without using an assignment
   digits.push(4, 5, 6)
-})()
+}

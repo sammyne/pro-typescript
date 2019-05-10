@@ -1,4 +1,4 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-48. Undefined result", () => {
   it("", () => {
@@ -10,6 +10,6 @@ describe("Listing 1-48. Undefined result", () => {
 
     // undefined
     //console.log(fourth)
-    assert.deepStrictEqual(fourth, undefined)
+    expect(fourth).to.deep.equal(undefined)
   })
 })

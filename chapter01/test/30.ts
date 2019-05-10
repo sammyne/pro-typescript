@@ -1,7 +1,7 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-30. Increment and decrement", () => {
-  it("", () => {
+  it("gets counter as 10", () => {
     let counter = 0
 
     do {
@@ -10,6 +10,6 @@ describe("Listing 1-30. Increment and decrement", () => {
 
     // 10
     //alert(counter)
-    assert.deepStrictEqual(counter, 10)
+    expect(counter).to.equal(10)
   })
 })

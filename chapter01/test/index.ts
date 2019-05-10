@@ -11,6 +11,7 @@
 //import "../src/80"
 
 // testing
+import "./30"
 import "./59"
 
 import { assert, expect } from "chai"

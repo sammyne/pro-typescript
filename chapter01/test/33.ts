@@ -1,7 +1,7 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-33. Unary plus and minus operators", () => {
-  it("", () => {
+  it("should convert string into number", () => {
     const str: string = "5"
 
     // 5: number
@@ -10,7 +10,7 @@ describe("Listing 1-33. Unary plus and minus operators", () => {
     // -5: number
     const negative = -str
 
-    assert.deepStrictEqual(num, 5)
-    assert.deepStrictEqual(negative, -5)
+    expect(num).to.deep.equal(5)
+    expect(negative).to.deep.equal(-5)
   })
 })

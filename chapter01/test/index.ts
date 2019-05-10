@@ -8,13 +8,13 @@
 //import "../src/77"
 //import "../src/78"
 //import "../src/79"
-import "../src/80"
+//import "../src/80"
 
 // testing
 import "./12"
 import "./59"
 
-import { expect } from "chai"
+import { assert, expect } from "chai"
 
 describe("Listing 1-64. Currying with arrow functions", () => {
   let multiply: (a: number) => (b: number) => number
@@ -73,5 +73,19 @@ describe("Listing 1-65. Currying with function overloads", () => {
     // 1,000
     const kilo = orderOfMagnitude(hecta)
     expect(kilo).to.equal(1000)
+  })
+})
+
+describe("Listing 1-82. Using the instanceof operator", () => {
+  it("check the inheritance correctly", async () => {
+    const { Display, Television, HiFi } = await import("../src/82")
+
+    const display = new Display()
+    const television = new Television()
+    const hiFi = new HiFi()
+
+    assert.isOk(display instanceof Display)
+    assert.isOk(television instanceof Display)
+    assert.isNotOk(hiFi instanceof Display)
   })
 })

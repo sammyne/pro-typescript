@@ -1,4 +1,4 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-56. Default parameters", () => {
   it("", () => {
@@ -21,10 +21,10 @@ describe("Listing 1-56. Default parameters", () => {
     const items = ["A", "B", "C"]
     // 'A,B,C'
     const result = concatenate(items)
-    assert.deepStrictEqual(result, "A,B,C")
+    expect(result).to.equal("A,B,C")
 
     // 'B-C'
     const partialResult = concatenate(items, "-", 1)
-    assert.deepStrictEqual(partialResult, "B-C")
+    expect(partialResult).to.equal("B-C")
   })
 })

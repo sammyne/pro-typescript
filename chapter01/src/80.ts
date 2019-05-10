@@ -1,6 +1,6 @@
-// Listing 1-79. Preserving context with a closure
+// Listing 1-80. Preserving context with bind
 
-namespace Listing79 {
+namespace Listing80 {
   class ClickCounter {
     private count = 0
     registerClick = () => {
@@ -11,7 +11,7 @@ namespace Listing79 {
 
   const clickCounter = new ClickCounter()
 
-  const onClick = () => clickCounter.registerClick()
+  const onClick = clickCounter.registerClick.bind(clickCounter)
 
   // below is fine
   onClick()

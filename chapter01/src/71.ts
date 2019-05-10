@@ -35,3 +35,6 @@ const songs = [
 const jukebox = new Jukebox(songs)
 
 jukebox.play()
+
+// export Song for external reference
+export { Song }

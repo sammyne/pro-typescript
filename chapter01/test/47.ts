@@ -1,4 +1,4 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-47. Object destructuring with rest parameter", () => {
   it("", () => {
@@ -9,10 +9,10 @@ describe("Listing 1-47. Object destructuring with rest parameter", () => {
 
     // 'Berkeley'
     //console.log(dog)
-    assert.deepStrictEqual(dog, "Berkeley")
+    expect(dog).to.equal("Berkeley")
 
     // Object { cat: 'Pickle', hamster: 'Hammy'}
     //console.log(others)
-    assert.deepStrictEqual(others, { cat: "Pickle", hamster: "Hammy" })
+    expect(others).to.deep.equal({ cat: "Pickle", hamster: "Hammy" })
   })
 })

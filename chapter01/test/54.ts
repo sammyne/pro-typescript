@@ -1,4 +1,4 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-54. Function type annotations", () => {
   it("", () => {
@@ -9,6 +9,6 @@ describe("Listing 1-54. Function type annotations", () => {
     }
     const result = getAverage(4, 3, 8) // 'The average is 5'
 
-    assert.deepStrictEqual(result, "The average is 5")
+    expect(result).to.equal("The average is 5")
   })
 })

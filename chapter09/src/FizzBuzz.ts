@@ -1,9 +1,15 @@
 export class FizzBuzz {
   generate(input: number) {
-    if (input === 3) {
-      return "Fizz"
+    let output = ""
+
+    if (input % 3 === 0) {
+      output += "Fizz"
     }
 
-    return input
+    if (input % 5 === 0) {
+      output += "Buzz"
+    }
+
+    return output === "" ? input : output
   }
 }

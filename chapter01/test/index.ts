@@ -115,3 +115,20 @@ describe("Listing 1-84. Uninitialized property", () => {
     assert.isNotOk("name" in display)
   })
 })
+
+describe("Listing 1-85. Obtaining runtime types", () => {
+  it("", async () => {
+    const { Television, HiFi } = await import("../src/82")
+
+    const tv = new Television()
+    const radio = new HiFi()
+
+    // Television
+    const tvType = tv.constructor.name
+    expect(tvType).to.equal("Television")
+
+    // HiFi
+    const radioType = radio.constructor.name
+    expect(radioType).to.equal("HiFi")
+  })
+})

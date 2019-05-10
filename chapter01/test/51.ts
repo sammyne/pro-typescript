@@ -1,4 +1,4 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-51. Array spreading", () => {
   it("", () => {
@@ -9,6 +9,6 @@ describe("Listing 1-51. Array spreading", () => {
 
     // [1, 4, 9, 16, 25, 2, 4, 8, 16, 32]
     //console.log(squaresAndPowers)
-    assert.deepStrictEqual(squaresAndPowers, [1, 4, 9, 16, 25, 2, 4, 8, 16, 32])
+    expect(squaresAndPowers).to.deep.equal([1, 4, 9, 16, 25, 2, 4, 8, 16, 32])
   })
 })

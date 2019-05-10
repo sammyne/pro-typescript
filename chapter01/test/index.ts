@@ -89,3 +89,17 @@ describe("Listing 1-82. Using the instanceof operator", () => {
     assert.isNotOk(hiFi instanceof Display)
   })
 })
+
+describe("Listing 1-83. The in property", () => {
+  it("check property ownership unreliably by in", async () => {
+    const { Display, Television, HiFi } = await import("../src/82")
+
+    const display = new Display()
+    const television = new Television()
+    const hiFi = new HiFi()
+
+    assert.isOk("name" in display)
+    assert.isOk("name" in television)
+    assert.isNotOk("name" in hiFi)
+  })
+})

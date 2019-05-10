@@ -1,4 +1,4 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-57. Rest Parameters", () => {
   it("", () => {
@@ -16,6 +16,6 @@ describe("Listing 1-57. Rest Parameters", () => {
 
     // 'The average is 6'
     const result = getAverage(2, 4, 6, 8, 10)
-    assert.deepStrictEqual(result, "The average is 6")
+    expect(result).to.equal("The average is 6")
   })
 })

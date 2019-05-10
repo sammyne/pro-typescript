@@ -16,4 +16,11 @@ describe("A FizzBuzz generator", () => {
 
     expect(result).to.equal(2)
   })
+
+  it('should return "Fizz" when 3 is played', () => {
+    const fizzBuzz = new FizzBuzz()
+    const result = fizzBuzz.generate(3)
+
+    expect(result).to.equal("Fizz")
+  })
 })

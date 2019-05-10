@@ -33,26 +33,26 @@ describe("A FizzBuzz generator", () => {
 
   it('should return "Fizz" when 6 is played', () => {
     const result = fizzBuzz.generate(6)
-    expect(result).to.be(FIZZ)
+    expect(result).to.equal(FIZZ)
   })
 
   it('should return "Buzz" when 5 is played', () => {
     const result = fizzBuzz.generate(5)
-    expect(result).to.be(BUZZ)
+    expect(result).to.equal(BUZZ)
   })
 
   it('should return "Buzz" when 10 is played', () => {
     const result = fizzBuzz.generate(10)
-    expect(result).to.be(BUZZ)
+    expect(result).to.equal(BUZZ)
   })
 
   it('should return "FizzBuzz" when 15 is played', () => {
     const result = fizzBuzz.generate(15)
-    expect(result).to.be(FIZZ_BUZZ)
+    expect(result).to.equal(FIZZ_BUZZ)
   })
 
   it('should return "FizzBuzz" when 30 is played', () => {
     const result = fizzBuzz.generate(30)
-    expect(result).to.be(FIZZ_BUZZ)
+    expect(result).to.equal(FIZZ_BUZZ)
   })
 })

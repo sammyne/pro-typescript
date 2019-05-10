@@ -63,6 +63,27 @@ describe('Listing 1-10. Enumerations', () => {
   });
 });
 
+describe('Listing 1-11. Enumeration split across multiple blocks', () => {
+  it('should merge enummerations', () => {
+    enum BoxSize {
+      Small,
+      Medium,
+    }
+
+    //...
+
+    enum BoxSize {
+      Large = 2,
+      XLarge,
+      XXLarge,
+    }
+
+    const size = BoxSize.Large
+    //console.log(size)
+    expect(size).to.equal(2)
+  });
+});
+
 describe("Listing 1-64. Currying with arrow functions", () => {
   let multiply: (a: number) => (b: number) => number
 

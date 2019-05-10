@@ -1,4 +1,4 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-41. Array destructuring", () => {
   it("", () => {
@@ -8,10 +8,10 @@ describe("Listing 1-41. Array destructuring", () => {
 
     // 1
     //console.log(first)
-    assert.deepStrictEqual(first, 1)
+    expect(first).to.equal(1)
 
     // 3
     //console.log(second)
-    assert.deepStrictEqual(second, 3)
+    expect(second).to.equal(3)
   })
 })

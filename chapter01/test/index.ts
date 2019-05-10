@@ -16,6 +16,21 @@ import "./59"
 
 import { assert, expect } from "chai"
 
+describe('Listing 1-04. Name reuse with let', () => {
+  it('should scope name correctly', () => {
+    let firstName = 'Chris';
+    {
+      let firstName = 'Tudor';
+
+      //console.log('Name 1: ' + firstName);
+      expect(firstName).to.equal("Tudor")
+    }
+
+    //console.log('Name 2: ' + firstName);
+    expect(firstName).to.equal("Chris")
+  });
+});
+
 describe("Listing 1-64. Currying with arrow functions", () => {
   let multiply: (a: number) => (b: number) => number
 

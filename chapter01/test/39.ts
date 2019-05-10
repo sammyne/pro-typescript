@@ -1,4 +1,4 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-39. The If-statement", () => {
   it("", () => {
@@ -12,6 +12,6 @@ describe("Listing 1-39. The If-statement", () => {
       message = "Failed"
     }
 
-    assert.deepStrictEqual(message, "Okay")
+    expect(message).to.equal("Okay")
   })
 })

@@ -12,9 +12,15 @@ namespace Listing77 {
 
   const clickCounter = new ClickCounter()
 
+  /*
   const elem = document.getElementById("target")
   if (elem) {
     // the this keyword lost its conext
     elem.onclick = clickCounter.registerClick
   }
+  */
+  const onClick = clickCounter.registerClick
+
+  // error out due to context lost
+  //onClick()
 }

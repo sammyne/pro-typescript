@@ -1,5 +1,5 @@
 export class FizzBuzz {
-  generate(input: number){
-    return 1
+  generate(input: number) {
+    return input
   }
 }

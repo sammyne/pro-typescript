@@ -25,10 +25,17 @@ describe("A FizzBuzz generator", () => {
     expect(result).to.equal(2)
   })
 
-  it('should return "Fizz" when 3 is played', () => {
+  it('should return "FakeFizz" when 3 is played', () => {
+    // Create a test double for storage
+    const storage: any = {
+      getItem: () => "FakeFizz",
+    }
+
+    const fizzBuzz = new FizzBuzz(storage)
+
     const result = fizzBuzz.generate(3)
 
-    expect(result).to.equal("Fizz")
+    expect(result).to.equal("FakeFizz")
   })
 
   it('should return "Fizz" when 6 is played', () => {

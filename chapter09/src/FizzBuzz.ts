@@ -1,5 +1,5 @@
 export class FizzBuzz {
-  constructor(private storage: Storage) {}
+  constructor(private storage?: Storage) {}
 
   generate(input: number): string | number {
     if (3 === input) {

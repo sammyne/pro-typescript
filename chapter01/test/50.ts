@@ -1,4 +1,4 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-50. Tuples and Destructuring", () => {
   it("", () => {
@@ -10,9 +10,7 @@ describe("Listing 1-50. Tuples and Destructuring", () => {
     // Destructuring the tuple into named variables
     const [sanFrancisco, london, rome] = getThreeLandmarks()
 
-    assert.deepStrictEqual(
-      [sanFrancisco, london, rome],
-      ["Golden Gate Bridge", "Palace of Westminster", "Colosseum "]
+    expect([sanFrancisco, london, rome]).to.deep.equal(["Golden Gate Bridge", "Palace of Westminster", "Colosseum "]
     )
   })
 })

@@ -1,4 +1,4 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-52. Object spreading", () => {
   it("", () => {
@@ -14,13 +14,14 @@ describe("Listing 1-52. Object spreading", () => {
     // Object spreading
     const patrol = { ...emergencyService, ...utilityService }
 
-    const expect = {
+    const expected = {
       police: "Chase",
       fire: "Marshall",
       recycling: "Rocky",
       construction: "Rubble",
     }
+
     //console.log(patrol)
-    assert.deepStrictEqual(patrol, expect)
+    expect(patrol).to.deep.equal(expected)
   })
 })

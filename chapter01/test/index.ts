@@ -176,6 +176,38 @@ describe("Listing 1-19. Typed arrays", () => {
   })
 })
 
+describe("Listing 1-21. Indexed types", function () {
+  interface Cephalopod {
+    hasInk: boolean
+    arms: number
+    tentacles: number
+  }
+
+  interface CephalopodDictionary {
+    [index: string]: Cephalopod
+  }
+
+  it("should index item correctly", function () {
+    let dictionary: CephalopodDictionary = {}
+
+    dictionary["octopus vulgaris"] = { hasInk: true, arms: 8, tentacles: 0 }
+    dictionary["loligo vulgaris"] = { hasInk: true, arms: 8, tentacles: 2 }
+
+    // Error. Not assignable to type 'Cephalopod'
+    //dictionary[0] = { hasInk: true }
+
+    const octopus = dictionary["octopus vulgaris"]
+
+    // 0 (The common octopus has no tentacles)
+    expect(octopus.tentacles).to.equal(0)
+
+    // Remove item
+    delete dictionary["octopus vulgaris"]
+    //assert.deepStrictEqual(dictionary["octopus vulgaris"], undefined)
+    expect(dictionary["octopus vulgaris"]).to.equal(undefined)
+  })
+})
+
 describe("Listing 1-64. Currying with arrow functions", () => {
   let multiply: (a: number) => (b: number) => number
 

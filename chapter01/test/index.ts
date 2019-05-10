@@ -31,6 +31,21 @@ describe('Listing 1-04. Name reuse with let', () => {
   });
 });
 
+describe('Listing 1-05. Name reuse with var', () => {
+  it('should hoist the name', () => {
+    var firstName = 'Chris';
+    {
+      var firstName = 'Tudor';
+
+      //console.log('Name 1: ' + firstName);
+      expect(firstName).to.equal("Tudor")
+    }
+
+    //console.log('Name 2: ' + firstName);
+    expect(firstName).to.equal("Tudor")
+  });
+});
+
 describe("Listing 1-64. Currying with arrow functions", () => {
   let multiply: (a: number) => (b: number) => number
 

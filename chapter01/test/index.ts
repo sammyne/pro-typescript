@@ -132,3 +132,21 @@ describe("Listing 1-85. Obtaining runtime types", () => {
     expect(radioType).to.equal("HiFi")
   })
 })
+
+describe("Listing 1-86. Generic functions", () => {
+  it("reverse string correctly", async () => {
+    const { reverse } = await import("../src/86")
+
+    const letters = ["a", "b", "c", "d"]
+    const reversedLetters = reverse<string>(letters)
+    expect(reversedLetters).to.deep.equal(["d", "c", "b", "a"])
+  })
+
+  it("reverse numbers correctly", async () => {
+    const { reverse } = await import("../src/86")
+
+    const numbers = [1, 2, 3, 4]
+    const reversedNumbers = reverse<number>(numbers)
+    expect(reversedNumbers).to.deep.equal([4, 3, 2, 1])
+  })
+})

@@ -1,6 +1,7 @@
 // Listing 1-8. Type annotations
 
-;(() => {
+namespace Listing08 {
+
   // primitive type annotation
   const name: string = "Steve"
   const heightInCentimeters: number = 182.88
@@ -14,7 +15,7 @@
   let sayHello: (name: string) => string
 
   // implementation of sayHello function
-  sayHello = function(name) {
+  sayHello = function (name) {
     return "Hello " + name
   }
 
@@ -26,4 +27,4 @@
     name: "Mark",
     heightInCentimeters: 183,
   }
-})()
+}

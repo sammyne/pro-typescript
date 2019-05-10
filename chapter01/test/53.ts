@@ -1,4 +1,4 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-53. Spread operator in function call", () => {
   it("", () => {
@@ -14,6 +14,6 @@ describe("Listing 1-53. Spread operator in function call", () => {
 
     // 22
     //console.log(result)
-    assert.deepStrictEqual(result, 22)
+    expect(result).to.equal(22)
   })
 })

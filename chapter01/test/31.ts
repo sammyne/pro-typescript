@@ -1,7 +1,8 @@
-import assert from "assert"
+
+import { expect } from "chai"
 
 describe("Listing 1-31. Increment and decrement of enumerations", () => {
-  it("", () => {
+  it("should index enum correctly", () => {
     enum Size {
       S,
       M,
@@ -12,16 +13,17 @@ describe("Listing 1-31. Increment and decrement of enumerations", () => {
     let size = Size.S
     ++size
     //console.log(Size[size]) // M
-    assert.deepStrictEqual(Size[size], "M")
+    expect(Size[size]).to.equal("M")
 
     size = Size.XL
     --size
     //console.log(Size[size]) // L
-    assert.deepStrictEqual(Size[size], "L")
+    expect(Size[size]).to.equal("L")
 
     size = Size.XL
     ++size
     //console.log(Size[size]) // undefined
-    assert.deepStrictEqual(Size[size], undefined)
+    //assert.deepStrictEqual(Size[size], undefined)
+    expect(Size[size]).to.equal(undefined)
   })
 })

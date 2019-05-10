@@ -12,6 +12,7 @@
 
 // testing
 import "./30"
+import "./31"
 import "./59"
 
 import { assert, expect } from "chai"

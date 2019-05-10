@@ -1,4 +1,4 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-49. Default values", () => {
   it("", () => {
@@ -7,9 +7,10 @@ describe("Listing 1-49. Default values", () => {
     // Destructuring past available values
     const [, , third = -1, fourth = -1] = triangles
 
-    assert.deepStrictEqual(third, 6)
+    expect(third).to.equal(6)
+
     // undefined
     //console.log(fourth)
-    assert.deepStrictEqual(fourth, -1)
+    expect(fourth).to.equal(-1)
   })
 })

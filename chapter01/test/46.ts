@@ -1,4 +1,5 @@
-import assert from "assert"
+
+import { expect } from "chai"
 
 describe("Listing 1-46. Auto-unpacking", () => {
   it("", () => {
@@ -9,10 +10,10 @@ describe("Listing 1-46. Auto-unpacking", () => {
 
     // 'Central High'
     //console.log(s)
-    assert.deepStrictEqual(school, "Central High")
+    expect(school).to.equal("Central High")
 
     // 'Centaurs'
     //console.log(t)
-    assert.deepStrictEqual(team, "Centaurs")
+    expect(team).to.equal("Centaurs")
   })
 })

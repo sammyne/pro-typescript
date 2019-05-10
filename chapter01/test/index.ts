@@ -223,6 +223,15 @@ describe("Listing 1-26. Forced type assertions", function () {
   })
 })
 
+describe("Listing 1-27. Type Guard", function () {
+  it("should guard against string and number safely", async () => {
+    const { typeGuardExample } = await import("../src/27")
+
+    assert.deepStrictEqual(typeGuardExample("hello world"), 11)
+    assert.deepStrictEqual(typeGuardExample(12.34), "12")
+  })
+})
+
 describe("Listing 1-64. Currying with arrow functions", () => {
   let multiply: (a: number) => (b: number) => number
 

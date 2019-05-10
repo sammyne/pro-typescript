@@ -7,10 +7,15 @@ import "./59"
 
 import { expect } from "chai"
 
-import { multiply } from "../src/64"
-
 describe("Listing 1-64. Currying with arrow functions", () => {
-  it("Pass both arguments in sequence", () => {
+  let multiply: (a: number) => (b: number) => number
+
+  before(async () => {
+    const currying = await import("../src/64")
+    multiply = currying.multiply
+  })
+
+  it("Pass both arguments in sequence", async () => {
     const numA = multiply(5)(6)
     expect(numA).to.equal(30)
   })

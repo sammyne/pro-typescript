@@ -1,27 +1,31 @@
 // Listing 1-17. Number literal types and hybrid union/literal types
 
-// Number literal type
-type Fibonacci = 1 | 2 | 3 | 5 | 8 | 13
+namespace Listing17 {
 
-let num: Fibonacci
+  // Number literal type
+  type Fibonacci = 1 | 2 | 3 | 5 | 8 | 13
 
-// OK
-num = 8
+  let num: Fibonacci
 
-// Error: Type '9' is not assignable to type 'Fibonacci'
-//num = 9;
+  // OK
+  num = 8
 
-// Hybrid union/literal type
-type Randoms = "Text" | 10 | false
+  // Error: Type '9' is not assignable to type 'Fibonacci'
+  //num = 9;
 
-let random: Randoms
+  // Hybrid union/literal type
+  type Randoms = "Text" | 10 | false
 
-// OK
-random = "Text"
-random = 10
-random = false
+  let random: Randoms
 
-// Error: Not assignable.
-//random = 'Other String';
-//random = 12;
-//random = true;
+  // OK
+  random = "Text"
+  random = 10
+  random = false
+
+  // Error: Not assignable.
+  //random = 'Other String';
+  //random = 12;
+  //random = true;
+
+}

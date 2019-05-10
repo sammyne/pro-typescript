@@ -1,4 +1,4 @@
-import assert from "assert"
+import { expect } from "chai"
 
 describe("Listing 1-44. Variable swapping", () => {
   it("", () => {
@@ -6,9 +6,9 @@ describe("Listing 1-44. Variable swapping", () => {
     let b = 5
 
       // Swapping
-    ;[a, b] = [b, a]
+      ;[a, b] = [b, a]
 
-    assert.deepStrictEqual(a, 5)
-    assert.deepStrictEqual(b, 3)
+    expect(a).to.equal(5)
+    expect(b).to.equal(3)
   })
 })

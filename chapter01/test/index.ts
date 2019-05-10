@@ -17,6 +17,7 @@ import "./32"
 import "./33"
 import "./34"
 import "./36"
+import "./37"
 import "./59"
 
 import { assert, expect } from "chai"

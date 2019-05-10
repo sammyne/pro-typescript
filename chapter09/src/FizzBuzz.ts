@@ -1,5 +1,11 @@
 export class FizzBuzz {
-  generate(input: number) {
+  constructor(private storage: Storage) {}
+
+  generate(input: number): string | number {
+    if (3 === input) {
+      return this.storage.getItem("FizzText")
+    }
+
     let output = ""
 
     if (input % 3 === 0) {

@@ -1,39 +1,43 @@
 // Listing 1-28. Custom Type Guard
 
-interface SpeedControllable {
-  increaseSpeed(): void
-  decreaseSpeed(): void
-  stop(): void
-}
+namespace Listing28 {
 
-interface InclineControllable {
-  lift(): void
-  drop(): void
-}
-
-function isSpeedControllable(
-  treadmill: SpeedControllable | any
-): treadmill is SpeedControllable {
-  if (treadmill.increaseSpeed && treadmill.decreaseSpeed && treadmill.stop) {
-    return true
+  interface SpeedControllable {
+    increaseSpeed(): void
+    decreaseSpeed(): void
+    stop(): void
   }
 
-  return false
-}
-
-function customTypeGuardExample(
-  treadmill: SpeedControllable | InclineControllable
-) {
-  // Error: Property does not exist
-  //const a = treadmill.increaseSpeed()
-  //const b = treadmill.lift()
-
-  // Type guard
-  if (isSpeedControllable(treadmill)) {
-    // OK
-    treadmill.increaseSpeed()
-  } else {
-    // OK
-    treadmill.lift()
+  interface InclineControllable {
+    lift(): void
+    drop(): void
   }
+
+  function isSpeedControllable(
+    treadmill: SpeedControllable | any
+  ): treadmill is SpeedControllable {
+    if (treadmill.increaseSpeed && treadmill.decreaseSpeed && treadmill.stop) {
+      return true
+    }
+
+    return false
+  }
+
+  function customTypeGuardExample(
+    treadmill: SpeedControllable | InclineControllable
+  ) {
+    // Error: Property does not exist
+    //const a = treadmill.increaseSpeed()
+    //const b = treadmill.lift()
+
+    // Type guard
+    if (isSpeedControllable(treadmill)) {
+      // OK
+      treadmill.increaseSpeed()
+    } else {
+      // OK
+      treadmill.lift()
+    }
+  }
+
 }

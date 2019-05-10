@@ -208,6 +208,21 @@ describe("Listing 1-21. Indexed types", function () {
   })
 })
 
+describe("Listing 1-26. Forced type assertions", function () {
+  it("retain the value due to failed conversion", function () {
+    const name: string = "Avenue Road"
+
+    // Error: Type 'string' cannot be converted to type 'number'
+    //const bedroomCount: number = <number>name
+
+    // Works
+    const workingBedroomCount: number = <number>(<any>name)
+
+    //console.log(workingBedroomCount)
+    expect(workingBedroomCount).to.equal("Avenue Road")
+  })
+})
+
 describe("Listing 1-64. Currying with arrow functions", () => {
   let multiply: (a: number) => (b: number) => number
 

@@ -1,4 +1,5 @@
-import assert from "assert"
+
+import { expect } from "chai"
 
 describe("Listing 1-40. Conditional operator", () => {
   it("", () => {
@@ -6,6 +7,6 @@ describe("Listing 1-40. Conditional operator", () => {
 
     const message = isValid ? "Okay" : "Failed"
 
-    assert.deepStrictEqual(message, "Okay")
+    expect(message).to.equal("Okay")
   })
 })

@@ -132,6 +132,50 @@ describe('Listing 1-13. Constant enumeration', () => {
   });
 });
 
+describe("Listing 1-19. Typed arrays", () => {
+  it("should be 'Peter the Great'", async () => {
+    interface Monument {
+      name: string
+      heightInMeters: number
+    }
+    // The array is typed using the Monument interface
+    const monuments: Monument[] = []
+
+    // Each item added to the array is checked for type compatibility
+    monuments.push({
+      name: "Statue of Liberty",
+      heightInMeters: 46,
+    })
+    monuments.push({
+      name: "Peter the Great",
+      heightInMeters: 96,
+    })
+    monuments.push({
+      name: "Angel of the North",
+      heightInMeters: 20,
+    })
+
+    function compareMonumentHeights(a: Monument, b: Monument) {
+      if (a.heightInMeters > b.heightInMeters) {
+        return -1
+      }
+      if (a.heightInMeters < b.heightInMeters) {
+        return 1
+      }
+      return 0
+    }
+
+    // The array.sort method expects a comparer that accepts two Monuments
+    const monumentsOrderedByHeight = monuments.sort(compareMonumentHeights)
+
+    // Get the first element from the array, which is the tallest
+    const tallestMonument = monumentsOrderedByHeight[0]
+
+    // Peter the Great
+    assert.deepStrictEqual(tallestMonument.name, "Peter the Great")
+  })
+})
+
 describe("Listing 1-64. Currying with arrow functions", () => {
   let multiply: (a: number) => (b: number) => number
 

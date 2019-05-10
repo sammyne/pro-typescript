@@ -103,3 +103,15 @@ describe("Listing 1-83. The in property", () => {
     assert.isNotOk("name" in hiFi)
   })
 })
+
+describe("Listing 1-84. Uninitialized property", () => {
+  it("unables to check the uninitialized property", () => {
+    class Display {
+      name!: string
+    }
+    const display = new Display()
+
+    // false
+    assert.isNotOk("name" in display)
+  })
+})

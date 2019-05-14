@@ -1,0 +1,11 @@
+{
+  "name": "chapter02",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "sammyne",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  }
+}

@@ -1,5 +1,5 @@
 // Listing 2-7. Modules
-namespace Listing07 {
+export namespace Listing07 {
   export interface Ship {
     name: string
     port: string

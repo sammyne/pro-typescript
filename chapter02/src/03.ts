@@ -1,4 +1,5 @@
 // Listing 2-3. Public and private members
+
 namespace Listing03 {
   namespace Shipping {
     // Available as Shipping.Ship

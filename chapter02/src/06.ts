@@ -1,25 +1,15 @@
-// Listing 2-7. Modules
-namespace Listing07 {
-  export interface Ship {
-    name: string
-    port: string
-    displacement: number
+// Listing 2-6. Namespace/class merging
+
+namespace Listing06 {
+  // Class/Namespace Merging
+  class Car {}
+
+  namespace Car {
+    export class Engine {}
+    export class GloveBox {}
   }
 
-  export class Ferry implements Ship {
-    constructor(
-      public name: string,
-      public port: string,
-      public displacement: number
-    ) {}
-  }
-
-  const defaultDisplacement = 4000
-  class PrivateShip implements Ship {
-    constructor(
-      public name: string,
-      public port: string,
-      public displacement: number = defaultDisplacement
-    ) {}
-  }
+  const car = new Car()
+  const engine = new Car.Engine()
+  const gloveBox = new Car.GloveBox()
 }

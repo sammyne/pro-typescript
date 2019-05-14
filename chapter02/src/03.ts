@@ -1,7 +1,7 @@
 // Listing 2-3. Public and private members
 
 namespace Listing03 {
-  namespace Shipping {
+  export namespace Shipping {
     // Available as Shipping.Ship
     export interface Ship {
       name: string

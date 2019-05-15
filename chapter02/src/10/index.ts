@@ -2,11 +2,9 @@
 
 // Import using an alias
 //import { Ship as Boat } from './Listing-2-007';
-import { Listing07 as Shipping } from "./07"
+import { Ship as Boat } from "../07"
 
 namespace Listing10 {
-  type Boat = Shipping.Ship
-
   export class Dock {
     private dockedShips: Boat[] = []
 
